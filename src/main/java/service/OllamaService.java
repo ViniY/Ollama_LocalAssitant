@@ -1,5 +1,7 @@
-import com.google.gson.*;
+package service;
+
 import model.OllamaResult;
+import com.google.gson.*;
 import okhttp3.*;
 import org.springframework.stereotype.Service;
 
@@ -8,11 +10,11 @@ import java.io.IOException;
 @Service
 public class OllamaService {
 
-    private static final String OLLAMA_URL = "http://localhost:11434/api/generate";
+    private static final String OLLAMA_URL = "http://localhost:8080/api/generate";
     private final OkHttpClient client = new OkHttpClient();
     private final Gson gson = new Gson();
 
-    public OllamaResult sendPrompt(String model, String prompt) throws IOException {
+    public String sendPrompt(String model, String prompt) throws IOException {
         JsonObject requestJson = new JsonObject();
         requestJson.addProperty("model", model);
         requestJson.addProperty("prompt", prompt);
@@ -31,7 +33,7 @@ public class OllamaService {
             if (!response.isSuccessful()) throw new IOException("Unexpected response: " + response);
 
             JsonObject responseBody = gson.fromJson(response.body().string(), JsonObject.class);
-            return new OllamaResult(responseBody.get("response").getAsString());
+            return new OllamaResult(responseBody.get("response").getAsString()).getResponse();
         }
     }
 }

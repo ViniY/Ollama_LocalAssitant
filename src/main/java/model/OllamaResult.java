@@ -1,9 +1,10 @@
+package model;
 
-public class PromptResponse {
+public class OllamaResult {
     private String response;
 
-    public PromptResponse() {}
-    public PromptResponse(String response) { this.response = response; }
+    public OllamaResult() {}
+    public OllamaResult(String response) { this.response = response; }
 
     public String getResponse() { return response; }
     public void setResponse(String response) { this.response = response; }

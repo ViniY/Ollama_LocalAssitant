@@ -1,5 +1,9 @@
+package controller;
+
+import dto.PromptRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import service.OllamaService;
 
 import java.io.IOException;
 
@@ -12,6 +16,6 @@ public class OllamaController {
 
     @PostMapping("/chat")
     public String chat(@RequestBody PromptRequest request) throws IOException {
-        return ollamaService.prompt(request.getModel(), request.getPrompt());
+        return ollamaService.sendPrompt(request.getModel(), request.getPrompt());
     }
 }

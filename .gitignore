@@ -1,0 +1,49 @@
+# Ignore IntelliJ IDEA files
+.idea/
+
+# Ignore Eclipse files
+.project
+.classpath
+.settings/
+
+# Ignore Maven/Gradle build directories
+/target/
+/build/
+
+# Ignore log files
+*.log
+
+# Ignore Eclipse specific files
+*.swp
+*.swo
+
+# Ignore compiled class files
+*.class
+
+# Ignore jar, war, and other artifacts
+*.jar
+*.war
+*.ear
+
+# Ignore Spring Boot specific files
+*.pid
+*.h2.db
+
+# Ignore dependencies
+/.m2/
+/.gradle/
+
+# Ignore application properties or sensitive files
+/src/main/resources/application.properties
+/src/main/resources/application.yml
+
+# Ignore test output
+/target/test-classes/
+/target/test-logs/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore other IDE files
+.vscode/

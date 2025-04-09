@@ -1,3 +1,5 @@
+package mapper;
+
 import dto.PromptResponse;
 import model.OllamaResult;
 

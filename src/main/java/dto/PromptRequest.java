@@ -1,3 +1,5 @@
+package dto;
+
 public class PromptRequest {
     private String model;
     private String prompt;
