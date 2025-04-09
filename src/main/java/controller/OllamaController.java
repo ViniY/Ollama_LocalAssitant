@@ -8,7 +8,7 @@ import service.OllamaService;
 import java.io.IOException;
 
 @RestController
-@RequestMapping("/api/ollama")
+@RequestMapping("/api")
 public class OllamaController {
 
     @Autowired
@@ -17,5 +17,9 @@ public class OllamaController {
     @PostMapping("/chat")
     public String chat(@RequestBody PromptRequest request) throws IOException {
         return ollamaService.sendPrompt(request.getModel(), request.getPrompt());
+    }
+    @GetMapping("/hello")
+    public String sayHello() {
+        return "Hello, World!";
     }
 }
