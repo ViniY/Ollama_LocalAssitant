@@ -1,10 +1,10 @@
 package mapper;
 
 import dto.PromptResponse;
-import model.OllamaResult;
+import model.OllamaChatMsg;
 
 public class PromptMapper {
-    public static PromptResponse toResponse(OllamaResult result) {
+    public static PromptResponse toResponse(OllamaChatMsg result) {
         return new PromptResponse(result.getResponse());
     }
 }

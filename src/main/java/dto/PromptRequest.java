@@ -4,6 +4,12 @@ public class PromptRequest {
     private String model;
     private String prompt;
 
+
+    public PromptRequest(String model, String prompt) {
+        this.model = model;
+        this.prompt = prompt;
+    }
+
     public String getModel() { return model; }
     public void setModel(String model) { this.model = model; }
 

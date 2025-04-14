@@ -1,6 +1,8 @@
 package controller;
 
 import dto.PromptRequest;
+import lombok.RequiredArgsConstructor;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import service.OllamaService;
@@ -9,6 +11,7 @@ import java.io.IOException;
 
 @RestController
 @RequestMapping("/api")
+@RequiredArgsConstructor
 public class OllamaController {
 
     @Autowired
@@ -21,5 +24,10 @@ public class OllamaController {
     @GetMapping("/hello")
     public String sayHello() {
         return "Hello, World!";
+    }
+
+    @GetMapping("/")
+    public String home() {
+        return "Chatbot API is running.";
     }
 }
