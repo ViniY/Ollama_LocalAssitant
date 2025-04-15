@@ -1,7 +1,7 @@
-package mapper;
+package com.chatbot.mapper;
 
-import dto.PromptResponse;
-import model.OllamaChatMsg;
+import com.chatbot.dto.PromptResponse;
+import com.chatbot.model.OllamaChatMsg;
 
 public class PromptMapper {
     public static PromptResponse toResponse(OllamaChatMsg result) {

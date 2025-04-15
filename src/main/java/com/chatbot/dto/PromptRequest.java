@@ -1,4 +1,4 @@
-package dto;
+package com.chatbot.dto;
 
 public class PromptRequest {
     private String model;

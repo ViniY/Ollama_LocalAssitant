@@ -1,11 +1,11 @@
-package controller;
+package com.chatbot.controller;
 
-import dto.PromptRequest;
+import com.chatbot.dto.PromptRequest;
 import lombok.RequiredArgsConstructor;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import service.OllamaService;
+import com.chatbot.service.OllamaService;
 
 import java.io.IOException;
 

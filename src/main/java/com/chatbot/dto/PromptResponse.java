@@ -1,4 +1,4 @@
-package dto;
+package com.chatbot.dto;
 
 public class PromptResponse {
     private String response;

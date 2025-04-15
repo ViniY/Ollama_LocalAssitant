@@ -1,4 +1,4 @@
-package service;
+package com.chatbot.service;
 
 import java.io.IOException;
 import java.time.LocalDateTime;
@@ -9,16 +9,16 @@ import org.springframework.web.reactive.function.client.WebClient;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 
-import dto.PromptRequest;
-import dto.PromptResponse;
+import com.chatbot.dto.PromptRequest;
+import com.chatbot.dto.PromptResponse;
 import lombok.RequiredArgsConstructor;
-import model.OllamaChatMsg;
+import com.chatbot.model.OllamaChatMsg;
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
-import repository.OllamaChatRepository;
+import com.chatbot.repository.OllamaChatRepository;
 
 
 @Service
@@ -56,7 +56,7 @@ public class OllamaService {
 
     public String sendPrompt(String model, String prompt) throws IOException {
         JsonObject requestJson = new JsonObject();
-        requestJson.addProperty("model", model);
+        requestJson.addProperty("com/chatbot/model", model);
         requestJson.addProperty("prompt", prompt);
         requestJson.addProperty("stream", false);
 
